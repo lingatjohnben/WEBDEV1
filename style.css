@@ -1,0 +1,361 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    font-family: "Inter", serif;
+
+    
+    
+}
+:root {
+    --bg-color: #ffd9e6;
+    --text-color: #d11f81;
+    --main-color: #d11f81;
+    --other-color: #000000;
+    --second-color: #d11f81;
+    --alt-color: #79145f;
+
+    --h1-font: 7.5rem;
+    --h2-font: 5.5rem;
+    --p-font: 1.1rem;
+}
+
+html {
+    scroll-padding-top: 100px;
+}
+
+
+body {
+    color: var(--text-color);
+    background: linear-gradient(250.55deg, #ffd9e6 0%, #ffd9e6 28.55%, #ffd9e6 75.55%);
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 28px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all .7s ease;
+}
+
+.logo img{
+    width: 10%;
+    height: auto;
+
+}
+
+nav ul.navlinks {
+    display: flex;
+    align-items: center;
+}
+
+nav ul.navlinks li {
+    margin: 0 15px; 
+}
+
+nav ul.navlinks li a { 
+    display: inline-block;
+    font-size: var(--p-font);
+    color: var(--text-color);
+    font-weight: 500;
+    transition: all .6s ease;
+}
+
+nav ul.navlinks li a:hover {
+    color: var(--other-color);
+    text-shadow: 0 0 10px #ffd9e6; 
+}
+
+.nav-side {
+    display: flex;
+    align-items: center;
+    gap: 20px; 
+}
+
+.n-btn {
+    display: inline-block;
+    padding: 14px 25px;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    border: 1px solid var(--second-color);
+    color: var(--text-color);
+    border-radius: 0.8rem;
+    background: #fedfea;
+    transition: all .7s ease;
+    white-space: nowrap; 
+    margin-left: 20px;
+}
+
+.n-btn:hover {
+    background: var(--main-color);
+    border: 1px solid var(--main-color);
+    color: white;
+    transform: scale(1.07) translateX(-5px); 
+}
+
+#menu-icon{
+    font-size: 42px;
+    z-index: 10000;
+    cursor: pointer;
+    margin-left: 20px;
+    color: var(--bg-color);
+    display: none;
+}
+
+section{
+    padding: 90px 17% 80px;
+
+}
+
+.home{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+
+.home-img img{
+    width: 140%;
+    height: auto;
+    border-radius: 0.8rem;
+}
+.home-text h1{
+    font-family: "Forum", serif;
+    font-size: 100;
+    font-weight: 4500;
+    margin: 22px 0;
+
+}
+
+.home-text h4{
+    font-size: x-large;
+    font-weight: 4500;
+    color:var(--main-color);
+    font-family: "Forum", serif;
+    margin-bottom: 50px;
+}
+
+.social{
+    position:absolute;
+    top: 50%;
+    padding: 0 8%;
+    transform: translateY(-50%);
+}
+    
+.social i{
+    display: block;
+    color: var(--alt-color);
+    margin: 28px 0;
+    font-size: 50px;
+    transition: all .7s ease;
+}
+
+.social i:hover{
+    transform: scale(1.1) translateY(-5px);
+    color: var(--main-color)
+}
+
+header.sticky{
+    background: linear-gradient(250.55deg, #ffd9e6 0%, #ffd9e6 28.55%, #ffd9e6 75.55%);
+    padding: 3px 2%;
+}
+
+.about{
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;  
+    padding: 20px; 
+    margin-left: 300px;
+}
+
+.about-text h2{
+    font-family: "Forum", serif;
+    font-size: 400;
+    font-weight: 5000;
+    margin-bottom: 20px;
+    margin-right: 50px;
+    margin-top: 50px;
+}
+
+.about-text p{
+    font-size: 350;
+    font-weight: 500;
+    line-height: 32px;
+    margin-bottom: 40px;
+    margin-right: 50px;
+}
+
+.btn{
+    display: inline-block;
+    padding: 14px 25px;
+    font-size: 14px;
+    font-weight: 500;
+    background: var(--main-color);
+    color: #ffd9e6;
+    text-transform: uppercase;
+    border: 1px solid var(--main-color);
+    border-radius: 0.8rem;
+    transition: all .7s ease;
+}
+
+.btn:hover{
+    background-color: transparent;
+    border: 1px solid var(--second-color);
+    color: var(--text-color);
+    transform: scale(1.1);
+    letter-spacing: 2px;
+}
+
+.head-text{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.head-left h4{
+    font-size: var(--h2-font); 
+    font-weight: 500;
+    font-family: "Forum", serif;
+}
+
+.head-right h4{
+    text-align: right; 
+    font-family: "Forum", serif; 
+    font-size: 40px; 
+    font-weight: 500; 
+    margin-right: 20px;
+}
+
+/* General Styles */
+.highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.highlights-grid a img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.highlights-grid a img:hover {
+    transform: scale(1.2) translateY(-6px);
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.highlights-grid p {
+    text-align: center;
+    font-family: "Forum", serif;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+/* Officers Section */
+.officers {
+    padding: 40px;
+    background-color: #ffd9e6;
+}
+
+.officers-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    justify-content: center;
+    align-items: start;
+    padding: 10px;
+}
+
+.officer {
+    width: auto;
+    padding: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.5s ease;
+    margin: 0 auto;
+}
+
+.officer img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    max-width: 300px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.officer:hover {
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+/* Header Section */
+.head-left, .head-right {
+    text-align: center;
+}
+
+.head-left h4, .head-right h4 {
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+/* Officers Links */
+.officers-link {
+    text-decoration: none;
+    color: var(--main-color);
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    font-family: "Forum", serif;
+}
+
+.officers-link:hover {
+    color: var(--other-color);
+    text-shadow: 0 0 5px #ffd9e6;
+}
+
+/* Footer */
+footer {
+    background-color: var(--bg-color);
+    color: var(--main-color);
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 1rem;
+}
+
+footer a {
+    color: var(--main-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: var(--other-color);
+}
+
